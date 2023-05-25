@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生考勤-学校评价</title>
+    <link rel="stylesheet" href="kaoqin-z.css">
+</head>
+<body>
+<!--导航栏部分-->
+<nav class="header">
+    <ul class="header_left">
+        <li>
+            <span>珠海北师大珠海校区</span>
+        </li>
+    </ul>
+    <ul class="header_right">
+        <li class="tou_xiang"><img src="https://qcpj.bnuz.edu.cn//upload/1/614c6305-76ad-4d4b-a4b1-825511b2d2ba.jpeg" alt="头像" id="touxiang" class="img-circle"></li>
+        <li><a href="#">转写测试</a></li>
+        <li><a href="#">声音采集</a></li>
+        <li class="h1"><a href="#">消息</a></li>
+        <li class="jiancelist">
+            <a href="#" class="jiancelist_dd">
+                <span id="teacherName">监测</span>
+                <span class="caret">▽</span>
+            </a>
+            <div class="jiancelist_menu">
+                <a href="#" style="color: black;height: 20px">我的积分</a>
+                <a href="#" style="color: black;height: 20px">变更科目</a>
+                <a href="#" style="color: black;height: 20px">修改密码</a>
+                <a href="#" style="color: black;height: 20px">我的课表</a>
+                <a href="#" style="color: black;height: 20px">我的班级</a>
+                <a href="#" style="color: black;height: 20px">课次信息</a>
+                <a href="#"></a>
+                <a href="#" style="color: black;height: 15px" id="xian">退出</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+<!--页面部分-->
+<div class="content">
+    <div class="kong"></div>
+    <div class="container">
+        <!--            导航栏部分-->
+        <div class="dao-hang">
+            <ul class="dao-hang_lan">
+                <li><div class="dropdown">
+                    <a href="#" class="drop_lei">学生评价</a>
+                    <div class="dropdown-content">
+                        <a href="#">学生考勤</a>
+                        <a href="#">学生果园</a>
+                        <a href="#">扣分明细</a>
+                        <a href="#">电子班牌</a>
+                        <a href="#">微课视频</a>
+                    </div>
+                </div></li>
+                <li><div class="dropdown">
+                    <a href="#" class="drop_lei">历史评价</a>
+                    <div class="dropdown-content">
+                        <a href="#">音评审核</a>
+                        <a href="#">历史通知</a>
+                        <a href="#">往期评价</a>
+                    </div>
+                </div></li>
+                <li><div class="dropdown">
+                    <a href="#" class="drop_lei">学生信息</a>
+                    <div class="dropdown-content">
+                        <a href="#">家庭积分</a>
+                        <a href="#">往期风采</a>
+                    </div>
+                </div></li>
+                <li><div class="dropdown">
+                    <a href="#" class="drop_lei">评价统计</a>
+                    <div class="dropdown-content">
+                        <a href="#">班风班纪</a>
+                        <a href="#">科目统计</a>
+                        <a href="#">素养统计</a>
+                        <a href="#">小组统计</a>
+                        <a href="#">班级统计</a>
+                        <a href="#">五管统计</a>
+                    </div>
+                </div></li>
+                <li><div class="dropdown">
+                    <a href="#" class="drop_lei">排行榜</a>
+                </div></li>
+                <li><div class="dropdown">
+                    <a href="#" class="drop_lei">期末评语</a>
+                    <div class="dropdown-content">
+                        <a href="#">录入成绩</a>
+                        <a href="#">科目评价</a>
+                        <a href="#">评语汇总</a>
+                    </div>
+                </div></li>
+            </ul>
+        </div>
+        <!--            通知栏部分-->
+        <div class="rollInform" id="showFamilyPerformaceDiv">
+            <div id="scroll_begin" style="display: inline;padding-left: 20px">
+                <span class="glyphicon glyphicon-bullhorn" style="font-size: 16px;color: black">🔈</span>
+                【最近学生自主申报】无
+            </div>
+        </div>
+
+        <div class="col">
+            <!--            日期部分-->
+            <div class="btn-riqi">
+                <button type="button" id="day-btn"><a href="http://localhost:63342/ruangong/kaoqin.html?_ijt=r9tqe30bke5atmnonsej83e17b">日</a></button>
+                <button type="button" id="week-btn"><a href="http://localhost:63342/ruangong/kaoqin-zhou.html?_ijt=osii218psi5fi3l9pbd2u8e95k">周</a></button>
+            </div>
+            <!--                下拉列表框部分-->
+            <div class="xia_la">
+                <span>年级</span>
+                <select name="年级" id="grade">
+                    <option value="一">一年级</option>
+                    <option value="二">二年级</option>
+                    <option value="四">四年级</option>
+                    <option value="评">班级评价</option>
+                </select>
+                &nbsp;
+                <span>班级</span>
+                <select name="班级" id="class">
+                    <option value="16">十六班</option>
+                    <option value=25>二十五班</option>
+                </select>
+                &nbsp;
+                <span>学号</span>
+                <select name="学号" id="xue_id">
+                    <option value="all">全部学号</option>
+                    <option value="10">1-10</option>
+                    <option value="20">11-20</option>
+                    <option value="30">21-30</option>
+                    <option value="40">31-40</option>
+                    <option value="50">41-50</option>
+                    <option value="60">51-60</option>
+                </select>
+
+                <span>周次</span>
+                <select name="学号" id="zhou-ci">
+                    <option value="all">16</option>
+                    <option value="10">1</option>
+                    <option value="20">2</option>
+                    <option value="30">3</option>
+                    <option value="40">4</option>
+                    <option value="50">5</option>
+                    <option value="60">6</option>
+                    <option value="60">7</option>
+                    <option value="60">8</option>
+                    <option value="60">9</option>
+                    <option value="60">10</option>
+                    <option value="60">11</option>
+                    <option value="60">12</option>
+                    <option value="60">13</option>
+                    <option value="60">14</option>
+                    <option value="60">15</option>
+                    <option value="60">16</option>
+                </select>
+
+
+            </div>
+            <!--                日历部分-->
+<!--            <div class="rili">-->
+<!--                <div class="get_day">-->
+<!--                    <input type="text" id="get_date" placeholder=" 2022-6 ">-->
+<!--                </div>-->
+<!--            </div>-->
+            <!--                搜索框部分-->
+            <div class="input-group">
+                <input id="search" type="text" placeholder="请输入学生姓名" size="15" style="margin-left: 50px">
+                <button id="search_btn" type="button"><span style="color: black">🔍</span></button>
+            </div>
+        </div>
+        <!--            学生信息部分-->
+        <div class="xin-xi">
+            <!--                学生信息部分-->
+            <div class="xin-xi1">
+                <div class="panel">
+                    <div class="panel_heading">
+                        <span>学生信息 (学号全部学号，第15周)</span>
+                    </div>
+                    <div class="panel-xin-xi">
+                        <label class="checkbox">
+                            <input type="checkbox" id="check_all">
+                            &nbsp;全选
+                        </label>
+                        <button title="刷新">
+                            <span>&#8634</span>
+                            刷新
+                        </button>
+                        <button title="反选">
+                            <span>&#8635</span>
+                            反选
+                        </button>
+                    </div>
+                    <!--                        信息列表部分-->
+                    <table id="check-table">
+                        <thead>
+                        <tr>
+                            <th>选<br>择</th>
+                            <th>学<br>号</th>
+                            <th>姓<br>名</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><input type="checkbox" name="checkname"></td>
+                            <td>1</td>
+                            <td>田立强</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkname"></td>
+                            <td>2</td>
+                            <td>张一秋</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkname"></td>
+                            <td>3</td>
+                            <td>林择杰</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkname"></td>
+                            <td>4</td>
+                            <td>黄士衡</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkname"></td>
+                            <td>5</td>
+                            <td>叶超邵</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkname"></td>
+                            <td>6</td>
+                            <td>刘光曜</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkname"></td>
+                            <td>7</td>
+                            <td>孟思莹</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkname"></td>
+                            <td>8</td>
+                            <td>陈文才</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkname"></td>
+                            <td>9</td>
+                            <td>张瀚之</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkname"></td>
+                            <td>10</td>
+                            <td>黄浩锌</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkname"></td>
+                            <td>11</td>
+                            <td>黄璟豪</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="checkname"></td>
+                            <td>12</td>
+                            <td>包文杰</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--                学生考勤部分-->
+            <div class="kao-qin">
+                <div class="panel-kao">
+                    <div class="panel-kao-heading"><span>学生考勤</span></div>
+                    <div class="table-kao-body">
+                        <div class="kao-row">
+                            <div class="col-1">
+                                <button id="ru-xiao" class="btn-kao">入校</button>
+                                <button id="shen-he" class="btn-kao">请假审核</button>
+                                <button id="tong-ji" class="btn-kao">考勤统计</button>
+                            </div>
+                            <div class="col-2">
+                                <textarea name="原因" id="reason" placeholder="请填写请假原因" rows="4" style="width: 100%"></textarea>
+                            </div>
+                            <div class="col-3"><button id="qing-jia" class="btn-kao">请假</button></div>
+                        </div>
+                        <table class="kao-table">
+                            <thead><tr>
+                                <th>编号</th>
+                                <th>姓名</th>
+                                <th>请假天数</th>
+                                <th>迟到天数</th>
+                                <th>早退天数</th>
+                                <th>缺勤天数</th>
+                                <th>预警率</th>
+                            </tr></thead>
+                            <tbody></tbody>
+                        </table>
+                        <table class="kao-table" hidden>
+                            <thead><tr>
+                                <th>编号</th>
+                                <th>姓名</th>
+                                <th>请假天数</th>
+                                <th>迟到天数</th>
+                                <th>早退天数</th>
+                                <th>缺勤天数</th>
+                                <th>预警率</th>
+                            </tr></thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--            翻页部分-->
+        <div class="fan-ye">
+            <nav>
+                <ul>
+                    <li class="fan-btn"><a href="#" title="上一页" id="up" role="button">&lt;</a></li>
+                    <li id="page-num" >&nbsp;&nbsp;0 / 0&nbsp&nbsp</li>
+                    <li class="fan-btn"><a href="#" title="下一页" id="down" role="button">&gt;</a></li>
+                    <li id="lat">
+                        <input type="text" id="tiao">
+                    <li class="fan-btn"><a href="#" title="跳转" id="jump">&#8631</a></li>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<!--        页脚部分-->
+<div class="foot">
+    <p>Coyright&nbsp&#169&nbsp2015-2022&nbsp北京师范大学智能工程与教育应用研究中心&nbspAll&nbspRights&nbspReserved</p>
+</div>
+</body>
+</html>

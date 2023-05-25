@@ -1,0 +1,579 @@
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+}
+/*顶部导航栏部分*/
+.header{
+    background-color: #2c3e50;
+    width: 100%;
+    height: 50px;
+}
+.header_right>li{
+    position: relative;
+    display: block;
+}
+.header .header_left>li>span{
+    font-size: 15px;
+    color: white;
+    line-height: 50px;
+    margin: 0 10px;
+    display: block;
+    float: left;
+}
+.header .header_right{
+    float: right;
+    font-size: 15px;
+    width: 400px;
+    margin: 0 10px;
+}
+.header .header_right li{
+    width: 60px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    margin: 0 10px;
+    float: left;
+}
+.header .header_right li a{
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+.header .header_right .tou_xiang {
+    line-height: 50px;
+    width: 50px;
+}
+
+.header .header_right .tou_xiang .img-circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 10px ;
+}
+.header .header_right a:hover{
+    color: #dedddd;
+}
+.header .header_right .h1{
+    text-align: center;
+}
+.jiancelist_menu{
+    display: none;
+    min-width: 100px;
+    position: absolute;
+    background-color: white;
+    color: black;
+    right: -30px;
+    float: left;
+    font-size: 10px;
+    padding: 20px;
+    line-height: 20px;
+    border: 1px solid #dedddd;
+    box-shadow: 0px 20px 20px -15px #bfbfbf;
+}
+.jiancelist_menu a{
+    display: block;
+    margin: 10px 0 auto;
+    float: left;
+    width: 60px;
+}
+.jiancelist_menu a:hover{
+    color: #aaadbd;
+}
+#xian{
+    border-top: 1px solid #bfbfbf;
+    width: 100px;
+    margin-top: 10px;
+}
+.jiancelist:hover .jiancelist_menu{
+    display: block;
+}
+/*中间内容部分*/
+.content{
+    margin-top: 0;
+    padding-bottom: 100px;
+    width: 100%;
+    height: 1100px;
+    background-color: #f7f5eb;
+}
+.kong{
+    width: 100%;
+    height: 15px;
+    background-color: #f7f5eb;
+}
+.container{
+    width: 970px;
+    margin: 0 auto;
+    height: 1000px;
+}
+/*导航栏部分*/
+.dao-hang{
+    width: 100%;
+    padding: 0;
+    height: 46px;
+    background-color: #2c3e50;
+}
+.dao-hang_lan{
+    margin: 0;
+}
+.dao-hang_lan li{
+    float: left;
+    width: 155px;
+    height: 46px;
+    margin: 0 auto;
+    padding:0;
+}
+.dropdown .drop_lei{
+    color: white;
+    padding-left: 34px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin:  0 auto;
+    line-height: 46px;
+    text-align: center;
+    vertical-align: middle;
+}
+.dropdown .drop_lei:hover{
+    color: #a5a4a4;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #2c3e50;
+    min-width: 130px;
+    font-size: 14px;
+}
+.dropdown-content a{
+    color: white;
+    padding: 15px 10px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover{
+    color: #a5a4a4;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+/*通知栏部分*/
+.rollInform{
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    height: 24px;
+    background-color: #6699cc;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#showFamilyPerformaceDiv span{
+    cursor: pointer;
+}
+.glyphicon{
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*日期部分*/
+.col{
+    width: 100%;
+    padding: 6px 0;
+    margin: 0;
+    height: 30px;
+}
+.btn-riqi{
+    margin: 0;
+    padding: 0;
+    width: 80px;
+
+    display: inline-block;
+}
+#day-btn {
+    text-align: center;
+    font-size: 10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    color: white;
+    padding: 0;
+    line-height: 10px;
+    background-color: #3f658b;
+    display: inline-block;
+    border: none;
+}
+#day-btn a{
+    color: white;
+    font-size: 10px;
+}
+#week-btn{
+    text-align: center;
+    font-size: 10px;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    padding: 0;
+    line-height: 10px;
+    background-color: #2c3e50;
+    display: inline-block;
+    border: none;
+}
+#week-btn a{
+    color: white;
+    font-size: 10px;
+}
+#day-btn:hover{
+    background-color: #547392;
+    border: 1px solid #000000;
+}
+#week-btn:hover{
+    background-color: #547392;
+    border: 1px solid #000000;
+}
+#day-btn:active{
+    border: 1px solid #000000;
+}
+#week-btn:active{
+    border: 1px solid #000000;
+}
+
+/*下拉列表部分*/
+.xia_la{
+    width: 400px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+/*日历部分*/
+.rili{
+    width: 120px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+#get_date{
+    width: 120px;
+    border: 1px solid #bfbfbf;
+    border-radius: 4px;
+    height: 22px;
+    background-color: white;
+}
+/*搜索框部分*/
+.input-group{
+    margin: 0 2px;
+    padding: 0;
+    display: inline-block;
+    float: right;
+}
+#search{
+    margin: 0;
+    padding: 0;
+    height: 22px;
+    border: 1px solid #c6c3c3;
+}
+#search_btn{
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #c6c3c3;
+    background-color: #2c3e50;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+/*学生信息部分*/
+.xin-xi1{
+    padding: 0;
+    border-radius: 4px;
+    width: 321px;
+    height: 800px;
+    display: inline-block;
+    border:1px solid #000000 ;
+    background-color: white;
+}
+.panel_heading{
+    margin: 0;
+    padding: 5px 15px;
+    background-color: #2c3e50;
+    height: 30px;
+    width: 290px;
+    border-radius: 4px;
+}
+.panel_heading span{
+    font-size: 17px;
+    color: white;
+    text-align: center;
+    margin-left: 20px;
+    line-height: 30px;
+}
+.panel-xin-xi{
+    margin: 0;
+    padding: 2px 10px 10px;
+    background-color: white;
+    height: 40px;
+    width: 300px;
+}
+.panel-xin-xi .checkbox{
+    margin: 0;
+    padding: 8px;
+    width: 5px;
+    font-size: 14px;
+}
+.panel-xin-xi .checkbox input{
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    padding: 0;
+    margin: 20px 2px 10px 0;
+}
+.panel-xin-xi button{
+    float: right;
+    width: 50px;
+    height: 24px;
+    font-size: 12px;
+    margin-top: 18px;
+    padding: 0;
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid #bfbfbf;
+}
+.panel-xin-xi button span{
+    margin-left:0;
+    padding: 0;
+    width: 22px;
+    height: 22px;
+}
+/*信息列表部分*/
+#check-table{
+    width: 280px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: white;
+    padding: 6px;
+    border-collapse: collapse;
+}
+#check-table thead{
+    margin-bottom: 10px;
+    height: 70px;
+    width: 300px;
+    text-align: center;
+}
+#check-table tbody{
+    width: 280px;
+    text-align: center;
+    display: table-row-group;
+    vertical-align: middle;
+    border-top:1.5px solid #dedddd;
+}
+#check-table tbody tr{
+    display: table-row;
+    border-top:1px solid #dedddd;
+    height: 50px;
+    font-size: 15px;
+}
+/*学生考勤部分*/
+.kao-qin{
+    padding: 0;
+    float: right;
+    border-radius: 4px;
+    width: 620px;
+    display: inline-block;
+    border:1px solid #000000 ;
+    background-color: white;
+}
+.panel-kao-heading{
+    margin: 0;
+    padding: 5px 15px;
+    background-color: #2c3e50;
+    height: 30px;
+    width: 590px;
+    border-radius: 4px;
+}
+.panel-kao-heading span{
+    font-size: 17px;
+    color: white;
+    text-align: center;
+    margin-left: 10px;
+    line-height: 30px;
+}
+/*学生考勤部分*/
+.kao-row{
+    width: 100%;
+}
+.kao-row .colj-1{
+    border: 3px dashed #bfbfbf;
+    width: 570px;
+    height: 100px;
+    margin: 20px;
+    float: left;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #dde1e7;
+}
+.kao-row .colj-1 .colj-left{
+    display: inline-block;
+    text-align: center;
+    line-height: 100px;
+    vertical-align: middle;
+    margin-top: -74px;
+}
+.kao-row .colj-1 .colj-center{
+    display: inline-block;
+}
+.kao-row .colj-1 .colj-right{
+    display: inline-block;
+    text-align: center;
+    line-height: 100px;
+    vertical-align: middle;
+    margin-top: -74px;
+}
+
+.kao-row .colx-1{
+    border: 2px dashed #bfbfbf;
+    width: 600px;
+    height: 300px;
+    margin:5px;
+    font-size: 15px;
+    float: left;
+    background-color: #dde0e8;
+    border-radius: 6px;
+}
+.kao-row .colx-1 .colx-f p{
+    text-align: center;
+    background-color: #3f658b;
+    border-radius: 6px;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+}
+.kao-row .colx-1 .colx-s{
+    margin: 20px;
+    text-align: center;
+}
+.kao-row .colx-1 .colx-l{
+    margin: 20px;
+    text-align: center;
+}
+.kao-row .colx-1 .colx-ll{
+    margin-left: 40px;
+    display: inline-block;
+    text-align: center;
+}
+.kao-row .colx-1 .colx-lls{
+    margin: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.kao-row .colx-1 .colx-lls button{
+    vertical-align: middle;
+    margin-top: -40px;
+    margin-left: 40px;
+}
+
+.kao-row .btn-kao{
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 7px;
+    margin: 10px;
+}
+.kao-table{
+    margin: 20px 20px;
+    width: 580px;
+    border-collapse: collapse;
+}
+.kao-table thead{
+    border-bottom: 2px solid #e0dcdc;
+}
+.kao-table thead th{
+    width: 40px;
+    height: 50px;
+    font-size: 14px;
+}
+/*页面翻转部分*/
+.fan-ye{
+    width: 400px;
+    height: 100px;
+    text-align: center;
+    margin: 50px 300px;
+    vertical-align: middle;
+
+
+}
+.fan-ye ul li{
+    display: inline-block;
+    height: 100px;
+    float: left;
+    text-align: center;
+
+}
+.fan-ye ul li a{
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+}
+.fan-ye ul li input{
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+    border: 1px solid #474747;
+    border-radius: 2px;
+    margin: 33px 0 auto;
+}
+.fan-ye ul .fan-btn{
+    display: inline-block;
+    background-color: white;
+    width: 40px;
+    height: 30px;
+    border-radius: 16px;
+    margin: 30px 0 auto;
+    border: 1px solid #e8e7e7;
+
+}
+#page-num{
+    display: inline-block;
+    font-size: 14px;
+    height: 20px;
+    margin: 35px 0 auto;
+
+}
+#lat{
+    display: inline-block;
+    width: 100px;
+    margin-top: 0;
+}
+/*页脚部分*/
+.foot{
+    float: bottom;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #2c3e50;
+    text-align: center;
+    vertical-align: middle;
+}
+.foot p{
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    height: 40px;
+}
